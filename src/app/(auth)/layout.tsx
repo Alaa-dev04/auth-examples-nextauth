@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 export default function AuthLayout({
   children,
 }: {
@@ -5,11 +6,10 @@ export default function AuthLayout({
 }) {
   return (
     <>
-   
-        <div className="bg-black m-24 text-white min-h-screen flex flex-col justify-between items-center text-center">
-          <main className="flex-1 flex flex-col mx-4 ">{children}</main>
-        </div>
-
+      <div className="bg-black  text-white min-h-screen flex flex-col justify-between items-center text-center">
+        <main className="flex-1 flex flex-col mx-4 m-24 ">{children}</main>
+        <Toaster />
+      </div>
     </>
   );
 }

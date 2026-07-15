@@ -1,9 +1,10 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LoginSchema, LoginType } from "@/src/zod/login-schema";
+import { LoginSchema, LoginType } from "@/zod/login-schema";
 import { doLoginCradintials } from "../app/actions";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 const useLogin = () => {
   const router = useRouter();
@@ -21,10 +22,13 @@ const useLogin = () => {
     const responce = await doLoginCradintials(formdata);
     if (responce?.error) {
       console.log(responce.error);
+      toast.error("invalied email or password ");
       return;
     }
-    router.push("/home");
     form.reset();
+    router.push("/home");
+
+    toast.success("welcome back !");
   };
   return {
     form,
