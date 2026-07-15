@@ -9,3 +9,16 @@ export async function doLogout() {
     await signOut({redirectTo :"/login"})
 }
 
+export async function doLoginCradintials (formData : any){
+  try {
+    const response = await signIn("credentials",{
+      email : formData.get('email'),
+      password : formData.get('password'),
+      redirect:false, 
+      // i dont wanna it to redirect me if there an error right 
+    });
+    return response;
+  }catch(err){
+    throw err;
+  }
+}
