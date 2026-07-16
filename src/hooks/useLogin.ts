@@ -1,7 +1,7 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LoginSchema, LoginType } from "@/zod/login-schema";
+import { LoginSchema, LoginType } from "@/src/zod/login-schema";
 import { doLoginCradintials } from "../app/actions";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
