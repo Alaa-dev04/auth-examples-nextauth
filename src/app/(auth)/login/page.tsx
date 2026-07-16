@@ -1,5 +1,5 @@
-import Logingoogle_github from "@/src/components/logingoogle_github"
-import LoginCredentials from "@/src/components/login-cradintials"
+import Logingoogle_github from "@/src/components-pages/logingoogle_github"
+import LoginCredentials from "@/src/components-pages/login-cradintials"
 const Login = () => {
   return (
     <div className=" flex flex-col  ">

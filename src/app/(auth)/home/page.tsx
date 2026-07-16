@@ -1,7 +1,7 @@
 /// auth is an async function that we have to use await to use
 import { auth } from "@/src/auth";
 import { redirect } from "next/navigation";
-import Logout from "@/src/components/logout";
+import Logout from "@/src/components-pages/logout";
 import Image from "next/image";
 const Home = async () => {
   const session = await auth();
