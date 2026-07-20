@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Regester = () => {
+const RegesterForm = () => {
   return (
     <div>
-     <p></p>
+      
     </div>
   )
 }
 
-export default Regester
+export default RegesterForm
