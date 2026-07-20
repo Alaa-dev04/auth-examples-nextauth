@@ -7,8 +7,8 @@ const Login = () => {
             <h1 className="text-3xl">hello lets sign in </h1>
             <Logingoogle_github/>
             <LoginCredentials/>
-            <h1 className="text-3xl">do not have an account  </h1>
-            <Link href={'/register'}/>
+            <h1 className="text-3xl">do not have an account  <Link href={'/register'} > register</Link> </h1>
+           
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const Regester = () => {
   return (
     <div>
-     <p></p>
+     <p>yesssssssssssssss</p>
     </div>
   )
 }
