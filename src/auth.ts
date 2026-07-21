@@ -2,7 +2,6 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { getuserbyemail } from "./data/user";
 import { User } from "./models/user";
 import bcrypt from "bcryptjs";
 import { dbconnect } from "./lib/mongodb";
