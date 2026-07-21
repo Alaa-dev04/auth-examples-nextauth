@@ -7,7 +7,8 @@ export interface UserType {
 }
 export async function createUser(user : UserType) {
     try {
-        await User.create(user);
+        const newUser = await User.create(user);
+        console.log("Created user:", newUser);
     } catch (e) {
         if (e instanceof Error) throw e;
         throw new Error(String(e));
