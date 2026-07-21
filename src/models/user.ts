@@ -7,15 +7,15 @@ interface UserType {
 }
 const userSchema = new Schema<UserType> ({
     name:{
-        require:true,
+        required:true,
         type: String,
     },
     password:{
-        require:true,
+        required:true,
         type: String,
     },
     email:{
-        require:true,
+        required:true,
         type: String,
     },
 });
