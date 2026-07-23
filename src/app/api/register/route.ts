@@ -34,9 +34,7 @@ export async function POST(request: Request) {
         message: "Error creating user",
         error: err instanceof Error ? err.message : String(err),
       },
-      {
-        status: 500,
-      }
+      
     );
   }
 
