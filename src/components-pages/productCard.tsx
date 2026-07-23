@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 export type Product = {
   id: number;
   title: string;
@@ -39,9 +40,11 @@ const ProductCard = ({
         </p>
       )}
       {showButton && (
-        <button className="mt-4 rounded-lg bg-black px-6 py-2 text-white cursor-pointer">
-          Add to Cart
-        </button>
+        <Link href={`/products/${product.id}/checkout`}>    
+          <button className="mt-4 rounded-lg bg-black px-6 py-2 text-white cursor-pointer">
+            Add to Cart
+          </button>
+        </Link>
       )}
     </div>
   );

@@ -3,6 +3,7 @@ import { auth } from "@/src/auth";
 import { redirect } from "next/navigation";
 import Logout from "@/src/components-pages/logout";
 import Image from "next/image";
+import Link from "next/link";
 const Home = async () => {
   const session = await auth();
   if (!session?.user) redirect("/login");
@@ -18,9 +19,14 @@ const Home = async () => {
         height={120}
         className="rounded-full m-7"
       />
+      <Link href="/products" className="text-3xl p-3">
+      all products
+      </Link>
+
       <Logout/>
     </div>
   );
 };
 
 export default Home;
+3

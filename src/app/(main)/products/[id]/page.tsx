@@ -17,15 +17,20 @@ const page = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["products", id],
     queryFn: () => getProduct(id as string),
-
   });
   if (isLoading) return <h1>Loading...</h1>;
   if (error) return <h1>Something went wrong.</h1>;
   if (!data) return <h1>Product not found.</h1>;
 
   return (
-    <div className="" >
-      <ProductCard product={data} key={data.id} showDetails={true} showButton={true} showPrice={true}  />
+    <div className="">
+      <ProductCard
+        product={data}
+        key={data.id}
+        showDetails={true}
+        showButton={true}
+        showPrice={true}
+      />
     </div>
   );
 };
